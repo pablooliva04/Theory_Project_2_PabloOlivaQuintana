@@ -1,3 +1,6 @@
+# Pablo Oliva Quintana
+# Date: 12/08/2024
+
 # The parse_ntm_file function reads and parses the .csv file defining NTM's structure. It
 # extracts: machine's name, states, input and tape alphabets, start/accept/
 # reject states, and transition rules. The transitions are stored as dictionaries for easy lookup 
@@ -112,15 +115,14 @@ def calculate_nondeterminism(explored):
 # and the sequence of configurations leading to the result.
 
 def output_results(explored, ntm):
-    print(f"NTM: {ntm['name']}")  # Print the machine's name
+    print(f"NTM: {ntm['name']}")  # Print machine's name
     print(f"Total configurations explored: {len(explored)}")  # Print the total configurations explored
     nondeterminism = calculate_nondeterminism(explored)  # Calculate and display the degree of nondeterminism
     print(f"Degree of Nondeterminism: {nondeterminism:.2f}")
-    for i, config in enumerate(explored):  # Print each explored configuration step-by-step
+    for i, config in enumerate(explored):  
         print(f"Step {i + 1}: {config}")
 
-# Example usage
 
-ntm_config = parse_ntm_file('a_plus.csv')  # Replace 'a_plus.csv' with your test file
-explored_configs = simulate_ntm(ntm_config, "aaa")  # Simulate the NTM with input "aaa"
-output_results(explored_configs, ntm_config)  # Output the results
+ntm_config = parse_ntm_file('a_plus.csv')  
+explored_configs = simulate_ntm(ntm_config, "aaa")  
+output_results(explored_configs, ntm_config)  
