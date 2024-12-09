@@ -1,0 +1,16 @@
+--- Simulation Summary ---
+Machine: ends with bb
+Input String: aaabb
+Result: accept
+Depth: 6
+Configurations Explored: 7
+Average Non-Determinism: 1.17
+
+Detailed Steps:
+Step 1: (, q1, aaabb)
+Step 2: (a, q1, aabb_)
+Step 3: (aa, q1, abb__)
+Step 4: (aaa, q1, bb___)
+Step 5: (aaab, q2, b____)
+Step 6: (aaabb, q3, _____)
+Step 7: (aaabb, qacc, ______)

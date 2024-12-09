@@ -1,0 +1,14 @@
+--- Simulation Summary ---
+Machine: a plus
+Input String: aaa
+Result: accept
+Depth: 4
+Configurations Explored: 5
+Average Non-Determinism: 1.25
+
+Detailed Steps:
+Step 1: (, q1, aaa)
+Step 2: (a, q1, aa_)
+Step 3: (aa, q1, a__)
+Step 4: (aaa, q1, ___)
+Step 5: (aaa, qacc, ____)
